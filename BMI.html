@@ -1,0 +1,187 @@
+<!doctype html>
+
+
+<html lang="en">
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="GYm,fitness,business,company,agency,multipurpose,modern,bootstrap4">
+  
+  <meta name="author" content="Themefisher.com">
+
+  <title>GymFit| Fitness template</title>
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Icofont Css -->
+  <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
+  <!-- Themify Css -->
+  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <!-- Magnify Popup -->
+  <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script.js"></script>
+
+</head>
+<body>
+
+<!-- Header Start -->
+<div id="displayNavBar">
+	<script>
+		displayNavBar()
+	</script>
+</div>
+
+
+<!-- Header Close -->
+
+<div class="main-wrapper ">
+<section class="page-title bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="home.html" class="text-sm letter-spacing text-white text-uppercase font-weight-bold">Home</a></li>
+            <li class="list-inline-item"><span class="text-white">|</span></li>
+            <li class="list-inline-item"><a href="macros.html" class="text-color text-uppercase text-sm letter-spacing">Macros</a></li>
+          </ul>
+           <h1 class="text-lg text-white mt-2">BMI calculator</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BMI Table -->
+<div class="row" style="margin-left:20px; margin-right:20px ;margin-top:60px ; margin-bottom: 30px;">
+	<div class="col-lg-6" >
+		<h3>calculate your BMI</h3>
+		<p>(BODY MASS INDEX)
+			BMI is a reliable indicator used to screen weight categories. This calculator provides BMI and the corresponding weight category.</p>
+			<div class="row" style="margin-bottom:20px ;">
+				<div class="col-md-6"><input type="number" name="" id="heigth" style="outline: 0 ;border-width: 0 0 2px;" placeholder="HEIGTH in m"
+					onfocus="this.placeholder = ''" onblur="this.placeholder = 'HEIGTH in m'"></div>
+				<span id="weigthError"></span>
+				<div class="col-md-6"><input type="number" name="" id="weigth" style="outline: 0 ;border-width: 0 0 2px;"placeholder="WEIGTH in kg"
+					onfocus="this.placeholder = ''" onblur="this.placeholder = 'WEIGTH in kg'"></div>
+				<span id="heigthError"></span>
+			</div>
+			<div class="row" style="margin-bottom:20px ;">
+				<div class="col-md-6"><input type="number" name="" id="age" style="outline: 0 ;border-width: 0 0 2px;"placeholder="AGE"
+					onfocus="this.placeholder = ''" onblur="this.placeholder = 'AGE'"></div>
+				<span id="ageError"></span>
+				<div class="col-md-6">
+					<select name="" id="gender">
+						<option></option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+				<div class="col-md-12">
+					<input type="submit" class="btn btn-main" value="calculate" style="width:100% ;margin-top: 20px ;" onclick="bmi()"> 
+				</div>
+				<div class="col-md-12" id="again"></div>
+			</div>
+			
+	</div>
+	
+<!-- tableau  -->
+	<div class="col-lg-6">
+		
+		<table class="table table-hover">
+			<thead>
+			  <tr>
+				<th scope="col">BMI</th>
+				<th scope="col">Body Status</th>
+				
+			</thead>
+			<tbody>
+			  <tr id="first">
+				<th scope="row">Below 18.5</th>
+				<td>Underweight</td>
+			  </tr>
+			  <tr id="second">
+				<th scope="row">18.5 - 24.9</th>
+				<td>Healthy</td>
+			  </tr>
+			  <tr id="third">
+				<th scope="row">25.0 - 29.9</th>
+				<td colspan="2">Overweight</td>
+			  </tr>
+			  <tr id="forth">
+				<th scope="row">30.0 - and Above</th>
+				<td colspan="2">Obese</td>
+				
+			  </tr>
+			</tbody>
+		  </table>
+		
+	</div>
+</div>
+
+<div class="d-flex justify-content-center" id="bmi" ></div>
+<div class="d-flex justify-content-center" id="bmr" ></div>
+<div class="d-flex justify-content-center" id="fat" ></div>
+
+<!-- div macro -->
+	<section class="section macros bg-black" >
+		<h2 class="text-white text-capitalize" style="text-align:center ;"></i>make it Easier , track your <span class="text-color">Macros</span> right here</h2>
+		<br>
+		<a href="macros.html" target="_blank" class="btn btn-main " style="margin-left:45% ;">macros <i class="ti-angle-right ml-3"></i></a>
+	</section>
+		
+
+
+<div class="container" style="margin-top:30px ;margin-bottom: 30px;">
+<div class="row">
+	<div class="col-lg-6"> <h2 class="text-black " style="text-align:center ;"></i>Check our certified<span class="text-color"> Nutritionists</span> right here</h2></div>
+	<div class="col-lg-6"> <h2 class="text-black " style="text-align:center ;"></i>Check our certified<span class="text-color"> trainers</span> right here</h2></div>
+	<div class="col-lg-6"> <a href="nutritionist.html" target="_blank" class="btn btn-main  "style="margin-left:32%" >Nutritionists </a></div>
+	<div class="col-lg-6"> <a href="trainers.html" target="_blank" class="btn btn-main "style="margin-left:35%" >trainers </a></div>
+</div>
+</div>  
+  
+
+
+<!-- footer Start -->
+<footer class="footer bg-black-50">
+	<div class="container" id="footer">
+		<script>
+			displayFooter()
+		</script>
+	</div>
+</footer>
+   </div>
+
+   <!-- 
+    Essential Scripts
+    =====================================-->
+
+
+   <!-- Main jQuery -->
+   <script src="plugins/jquery/jquery.js"></script>
+   <!-- Bootstrap 4.3.1 -->
+   <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+   <!-- Slick Slider -->
+   <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+   <!--  Magnific Popup-->
+   <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+   <!-- Form Validator -->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+   <!-- Google Map -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+   <script src="plugins/google-map/gmap.js"></script>
+
+   <script src="js/script.js"></script>
+
+   </body>
+
+   </html>

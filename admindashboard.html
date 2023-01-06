@@ -1,0 +1,157 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="GYm,fitness,business,company,agency,multipurpose,modern,bootstrap4">
+  
+  <meta name="author" content="Themefisher.com">
+
+  <title>GymFit| Admin Dashboard</title>
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Icofont Css -->
+  <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
+  <!-- Themify Css -->
+  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <!-- Magnify Popup -->
+  <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+
+<!-- Header Start -->
+<div id="displayNavBar">
+	<script>
+		displayNavBar()
+	</script>
+</div>
+
+
+<!-- Header Close -->
+
+<div class="main-wrapper ">
+<section class="page-title bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="home.html" class="text-sm letter-spacing text-white text-uppercase font-weight-bold">Home</a></li>
+            
+            
+          </ul>
+           <h1 class="text-lg text-white mt-2">Admin Dashboard</h1>
+           <button class="btn btn-main" onclick="logout()">logout</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- dashboard -->
+<div class="container" style="max-width:95% ; margin-bottom: 20px;">
+<section>
+    <div >
+        <nav class="row justify-content-center">
+            <div class="nav nav-tabs"  id="nav-tab" role="tablist">
+              <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Add product</a>
+              <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Display product</a>
+              <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-trainers" role="tab" aria-controls="nav-dashboard" aria-selected="false">trainers</a>
+              <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-users" role="tab" aria-controls="nav-clients" aria-selected="false">users</a>
+              <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-nutritionist" role="tab" aria-controls="nav-nutritionist" aria-selected="false">Nutritionists</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+				<div class="row justify-content-center">     
+					<div>
+						<div class="col-lg-12" style="margin-top: 20px;margin-bottom: 20px;"><input type="text" name="" id="foodName" placeholder="Food Name"></div>
+						<div class="col-lg-12" style="margin-top: 20px;margin-bottom: 20px;"><input type="number" name="" id="calories" placeholder="calories"></div>
+						<div class="col-lg-12" style="margin-top: 20px;margin-bottom: 20px;"><input type="number" name="" id="fat" placeholder="Fat"></div>
+						<div class="col-lg-12" style="margin-top: 20px;margin-bottom: 20px;"><input type="number" name="" id="protein" placeholder="Protein"></div>
+						<div class="col-lg-12" style="margin-top: 20px;margin-bottom: 20px;"><input type="number" name="" id="carbs" placeholder="Carbs"></div>
+						<div class="col-lg-12" style="margin-top: 20px;margin-bottom: 20px;"><input type="number" name="" id="fiber" placeholder="Fiber"></div>
+						<div class="col-lg-12" style="margin-top: 20px;margin-bottom: 20px;"><input type="number" name="" id="totalSugar" placeholder="Total Sugar"></div>
+						<div class="col-lg-12" style="margin-top: 20px;margin-bottom: 20px;"><input type="submit" class="btn btn-main " value="Add" onclick="addProduct()"></div>
+					</div>
+				</div>
+			</div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+				<div id="productsTable">
+					<script>
+					displayProducts()
+					</script>
+				</div>
+			</div>
+            <div class="tab-pane fade" id="nav-trainers" role="tabpanel" aria-labelledby="nav-trainers-tab">
+				<div id="displayTrainersAdmin">
+					<script>
+					displayTrainersAdmin()
+					</script>
+				</div>
+			</div>
+            <div class="tab-pane fade" id="nav-users" role="tabpanel" aria-labelledby="nav-clients-tab">
+				<div id="displayusersAdmin">
+					<script>
+					displayusersAdmin()
+					</script>
+				</div>
+			</div>
+            <div class="tab-pane fade" id="nav-nutritionist" role="tabpanel" aria-labelledby="nav-nutritionist-tab">
+				<div id="displayNutrsAdmin">
+					<script>
+					displayNutrsAdmin()
+					</script>
+				</div>
+			</div>
+          </div>
+    </div>
+</section>
+<div class="d-flex justify-content-center" id="quantity"></div>
+</div>
+<!-- dashboard end -->
+
+
+<!-- footer Start -->
+<footer class="footer bg-black-50">
+	<div class="container" id="footer">
+		<script>
+			displayFooter()
+		</script>
+	</div>
+</footer>
+   </div>
+
+   <!-- 
+    Essential Scripts
+    =====================================-->
+
+
+   <!-- Main jQuery -->
+   <script src="plugins/jquery/jquery.js"></script>
+   <!-- Bootstrap 4.3.1 -->
+   <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+   <!-- Slick Slider -->
+   <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+   <!--  Magnific Popup-->
+   <script src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+   <!-- Form Validator -->
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+   <!-- Google Map -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+   <script src="plugins/google-map/gmap.js"></script>
+
+   <script src="js/script.js"></script>
+
+   </body>
+
+   </html>
